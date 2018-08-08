@@ -1,0 +1,10 @@
+@import "../modules/colors";
+
+.icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  stroke-width: 0;
+  stroke: $top-menu-font-color;
+  fill: $top-menu-font-color;
+}

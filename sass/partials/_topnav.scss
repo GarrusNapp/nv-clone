@@ -1,0 +1,124 @@
+@import "../modules/colors";
+@import "../modules/animations";
+
+.top-navigation {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 70px;
+  background-color: $top-menu-background;
+  color: white;
+  .logo {
+    margin-left: 15px;
+    h1 {
+      font-family: "Karbon", sans-serif;
+      font-size: 2rem;
+
+      .first-bottom-border {
+        font-weight: bolder;
+        border-bottom: 2px solid $highlight-color;
+      }
+      .second-bottom-border {
+        border-bottom: 2px solid #f19621;
+      }
+    }
+  }
+
+  .link-list {
+    .menu-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 0 20px 0 20px;
+      border-left: 1px solid $top-menu-vertical-border-color;
+      height: 70px;
+      width: 70px;
+      svg {
+        transition: fill 0.3s ease-in-out;
+      }
+      &:hover svg {
+        fill: $highlight-color;
+      }
+    }
+
+    .hamburger-menu {
+      display: none;
+    }
+  }
+
+  .link-list,
+  .sub-menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+
+    .menu-text {
+      display: flex;
+      align-items: center;
+      font-family: "Karbon", sans-serif;
+      text-transform: uppercase;
+      padding: 0 20px 0 20px;
+      border-left: 1px solid $top-menu-vertical-border-color;
+
+      span {
+        position: relative;
+        transition: color 0.3s ease-in-out;
+        &::after {
+          position: absolute;
+          content: "";
+          display: block;
+          height: 2px;
+          background-color: $highlight-color;
+          width: 0%;
+          transition: width 0.3s ease-in-out;
+        }
+      }
+      &:hover {
+        & > span {
+          color: $highlight-color;
+          &::after {
+            width: 100%;
+          }
+        }
+        & > .sub-menu {
+          visibility:visible;
+          height: 70px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .sub-menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background-color: $sub-menu-background;
+    visibility:hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    .menu-info {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      font-size: 2rem;
+      text-transform: none;
+      color: $sub-menu-vertical-border-color;
+
+    }
+    .menu-text {
+      border-left: 1px solid $sub-menu-vertical-border-color;
+    }
+    li:nth-of-type(2) {
+      border: 0;
+    }
+  }
+}
