@@ -1,0 +1,29 @@
+@import "../modules/colors";
+@import "../modules/breakpoints";
+
+
+.link-list-small {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  max-height: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: $sub-menu-background;
+  transition: max-height 0.5s ease-out;
+
+  .small-menu-text {
+    font-family: "Karbon", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+    border-bottom: 2px solid $sub-menu-vertical-border-color;
+  }
+}
+
+.list-visible {
+  max-height: 500px;
+}
