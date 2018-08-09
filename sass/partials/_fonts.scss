@@ -1,9 +1,139 @@
 @font-face {
-  font-family: 'Droid';
-  src:url("../fonts/Google Font Droid/DroidSerif-Regular.ttf") format("truetype");
+  font-family: "Droid Sans";
+  src: url("../fonts/Google Font Droid/DroidSans.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Karbon';
-  src:url("../fonts/Karbon OT/Karbon-Regular.otf") format("opentype");
+  font-family: "Droid Sans";
+  src: url("../fonts/Google Font Droid/DroidSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Droid Serif";
+  src: url("../fonts/Google Font Droid/DroidSerif-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Droid Serif";
+  src: url("../fonts/Google Font Droid/DroidSerif-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Droid Serif";
+  src: url("../fonts/Google Font Droid/DroidSerif-BoldItalic.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Droid Serif";
+  src: url("../fonts/Google Font Droid/DroidSerif-Italic.ttf")
+    format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("../fonts/Karbon OT/Karbon-Bold.otf") format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("../fonts/Karbon OT/Karbon-BoldItalic.otf") format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("../fonts/Karbon OT/Karbon-Hairline.otf") format("opentype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("../fonts/Karbon OT/Karbon-HairlineItalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("../fonts/Karbon OT/Karbon-Thin.otf") format("opentype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("../fonts/Karbon OT/Karbon-ThinItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("../fonts/Karbon OT/Karbon-Light.otf") format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("../fonts/Karbon OT/Karbon-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("../fonts/Karbon OT/Karbon-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("../fonts/Karbon OT/Karbon-RegularItalic.otf") format("opentype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("../fonts/Karbon OT/Karbon-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("../fonts/Karbon OT/Karbon-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("../fonts/Karbon OT/Karbon-Semibold.otf") format("opentype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("../fonts/Karbon OT/Karbon-SemiboldItalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("../fonts/Karbon OT/Karbon-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("../fonts/Karbon OT/Karbon-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
 }
