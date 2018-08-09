@@ -49,6 +49,28 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: "html-loader",
+          options: {
+            attrs: false
+          }
+        }
+      },
+
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "/images/"
+            }
+          }
+        ]
       }
     ]
   },
