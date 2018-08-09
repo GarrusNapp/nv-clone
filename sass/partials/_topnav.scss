@@ -1,5 +1,5 @@
 @import "../modules/colors";
-@import "../modules/animations";
+@import "../modules/breakpoints";
 
 .top-navigation {
   display: flex;
@@ -13,14 +13,15 @@
   .logo {
     margin-left: 15px;
     h1 {
+      display: flex;
       font-family: "Karbon", sans-serif;
       font-size: 2rem;
 
       .first-bottom-border {
-        font-weight: bolder;
         border-bottom: 2px solid $highlight-color;
       }
       .second-bottom-border {
+        font-weight: 200;
         border-bottom: 2px solid #f19621;
       }
     }
@@ -46,6 +47,12 @@
 
     .hamburger-menu {
       display: none;
+      @include breakpoint(tablet) {
+        display: flex;
+      }
+      @include breakpoint(mobile) {
+        display: flex;
+      }
     }
   }
 
@@ -59,35 +66,45 @@
       display: flex;
       align-items: center;
       font-family: "Karbon", sans-serif;
+      font-weight: 700;
+      font-size: 13px;
       text-transform: uppercase;
-      padding: 0 20px 0 20px;
-      border-left: 1px solid $top-menu-vertical-border-color;
 
-      span {
-        position: relative;
+      a {
+        border-left: 1px solid $top-menu-vertical-border-color;
+        padding: 0 20px 0 20px;
         transition: color 0.3s ease-in-out;
-        &::after {
-          position: absolute;
-          content: "";
-          display: block;
-          height: 2px;
-          background-color: $highlight-color;
-          width: 0%;
-          transition: width 0.3s ease-in-out;
+        span {
+          position: relative;
+          &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            height: 2px;
+            background-color: $highlight-color;
+            width: 0%;
+            transition: width 0.3s ease-in-out;
+          }
         }
       }
       &:hover {
-        & > span {
+        & > a span {
           color: $highlight-color;
           &::after {
             width: 100%;
           }
         }
         & > .sub-menu {
-          visibility:visible;
+          visibility: visible;
           height: 70px;
           opacity: 1;
         }
+      }
+      @include breakpoint(tablet) {
+        display: none;
+      }
+      @include breakpoint(mobile) {
+        display: none;
       }
     }
   }
@@ -102,23 +119,29 @@
     height: 0;
     width: 100%;
     background-color: $sub-menu-background;
-    visibility:hidden;
+    visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease-in-out;
     .menu-info {
       display: flex;
       align-items: center;
       margin-right: 10px;
+      font-family: "Karbon", sans-serif;
       font-size: 2rem;
+      font-weight: 200;
       text-transform: none;
       color: $sub-menu-vertical-border-color;
-
     }
-    .menu-text {
+    .menu-text a {
       border-left: 1px solid $sub-menu-vertical-border-color;
     }
-    li:nth-of-type(2) {
+    li:nth-of-type(2) a {
       border: 0;
     }
+  }
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    height: auto;
   }
 }
