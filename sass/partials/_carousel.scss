@@ -3,6 +3,10 @@
   overflow: hidden;
 }
 
+.carousel-transition {
+  transition: left 0.7s;
+}
+
 .carousel-list {
   display: flex;
   position: relative;
@@ -11,6 +15,7 @@
   cursor: pointer;
 
   li {
+    position: relative;
     img {
       width: 100vw;
       -webkit-user-drag: none;
@@ -32,4 +37,24 @@
   .slide-3 {
     background-image: url("../images/slider-bg-03.jpg");
   }
+
+  .arrow-right, .arrow-left {
+    position: absolute;
+    top: 50%;
+    margin-top: -5vw;
+    border: 0;
+    font-size: 10vw;
+    color: white;
+    background-color: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+  .arrow-left {
+    left: 0;
+  }
+  .arrow-right {
+    right: 0;
+  }
+
 }
