@@ -1,3 +1,17 @@
+@mixin text-accents($color) {
+  &::after, &::before {
+    display: block;
+    content: "";
+    width: 30%;
+    height: 1px;
+    background-color: $color;
+  }
+
+  &::before {
+    width: 50%;
+  }
+};
+
 .carousel {
   position: relative;
   overflow: hidden;
@@ -16,26 +30,56 @@
 
   li {
     position: relative;
+    flex: 0 0 auto;
+    width: 100%;
     img {
-      width: 100vw;
+      width: 100%;
       -webkit-user-drag: none;
       -khtml-user-drag: none;
       -moz-user-drag: none;
       -o-user-drag: none;
       user-drag: none;
     }
+    span {
+      position: absolute;
+      font-family: "Karbon", sans-serif;
+      font-weight: 200;
+      font-size: 5vw;
+      color: $carousel-text-color;
+    }
   }
 
   .slide-1 {
     background-image: url("../images/slider-bg-01.jpg");
+    background-size: cover;
+    span {
+      top: 25%;
+      left: 5%;
+      width: 50%;
+      @include text-accents(#159eda)
+    }
   }
 
   .slide-2 {
     background-image: url("../images/slider-bg-02.jpg");
+    background-size: cover;
+    span {
+      top: 25%;
+      right: 0;
+      width: 50%;
+      @include text-accents(#f3a51e)
+    }
   }
 
   .slide-3 {
     background-image: url("../images/slider-bg-03.jpg");
+    background-size: cover;
+    span {
+      top: 25%;
+      right: 0;
+      width: 45%;
+      @include text-accents(#5f38de)
+    }
   }
 
   .arrow-right, .arrow-left {
