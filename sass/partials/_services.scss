@@ -1,0 +1,38 @@
+@import "../modules/colors";
+@import "../modules/breakpoints";
+
+.services {
+  position: relative;
+  background-color: $services-background;
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -45px;
+    width: 100px;
+    height: 100px;
+    background-color: $services-background;
+  }
+  &::before {
+    left: 0;
+    z-index: 1;
+    clip-path: polygon(0 0, 60% 0, 100% 100%, 0% 100%);
+  }
+  &::after {
+    right: 0;
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  @include breakpoint(tablet) {
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+  @include breakpoint(mobile) {
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+}
