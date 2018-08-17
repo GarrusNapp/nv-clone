@@ -40,7 +40,7 @@
       -o-user-drag: none;
       user-drag: none;
     }
-    span {
+     .promo-text {
       position: absolute;
       font-family: "Karbon", sans-serif;
       font-weight: 200;
@@ -52,7 +52,7 @@
   .slide-1 {
     background-image: url("../images/slider-bg-01.jpg");
     background-size: cover;
-    span {
+     .promo-text {
       top: 25%;
       left: 5%;
       width: 50%;
@@ -63,7 +63,7 @@
   .slide-2 {
     background-image: url("../images/slider-bg-02.jpg");
     background-size: cover;
-    span {
+     .promo-text {
       top: 25%;
       right: 0;
       width: 50%;
@@ -74,7 +74,7 @@
   .slide-3 {
     background-image: url("../images/slider-bg-03.jpg");
     background-size: cover;
-    span {
+     .promo-text {
       top: 25%;
       right: 0;
       width: 45%;
@@ -87,18 +87,30 @@
     top: 50%;
     margin-top: -5vw;
     border: 0;
-    font-size: 10vw;
+    font-size: 3vw;
     color: white;
+    width: 4vw;
+    height: 5vw;
+    padding: 0;
     background-color: transparent;
+
+    span {
+
+      line-height: 3vw;
+      text-align: center;
+    }
+
     &:focus {
       outline: none;
     }
   }
   .arrow-left {
     left: 0;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
   }
   .arrow-right {
     right: 0;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
   }
 
 }
