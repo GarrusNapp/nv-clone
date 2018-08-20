@@ -1,5 +1,6 @@
 @import "../modules/colors";
 @import "../modules/breakpoints";
+@import "../modules/readmore";
 
 .services {
   position: relative;
@@ -34,5 +35,89 @@
     &::before {
       display: none;
     }
+  }
+  .services-info {
+    padding: 20px 80px;
+    .header-small {
+      font-family: "Karbon", sans-serif;
+      font-weight: bold;
+      //font-size: 12px;
+      text-transform: uppercase;
+      color: $section-header-small;
+    }
+    .section-title {
+      font-family: "Karbon", sans-serif;
+      font-weight: 200;
+      font-size: 4rem;
+      color: $section-title;
+    }
+    p {
+      font-family: "Droid Sans", sans-serif;
+      font-size: 0.9rem;
+      line-height: 22px;
+      color: $text-color;
+      columns: 2;
+      column-gap: 60px;
+      margin: 30px 0 10px 0;
+      @include breakpoint(tablet) {
+        & {
+          columns: 1;
+        }
+      }
+      @include breakpoint(mobile) {
+        & {
+          columns: 1;
+        }
+      }
+    }
+
+    @include breakpoint(tablet) {
+      & {
+        padding: 20px;
+      }
+    }
+    @include breakpoint(mobile) {
+      & {
+        padding: 20px;
+      }
+    }
+  }
+  .services-icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-width: 200px;
+      margin: 20px 10px;
+      img {
+        align-self: center;
+      }
+      span {
+        font-family: "Karbon", sans-serif;
+        font-weight: 200;
+        font-size: 2rem;
+        color: $text-color;
+        text-align: center;
+      }
+    }
+    @include breakpoint(tablet) {
+      & {
+        flex-wrap: wrap;
+        div {
+          width: 250px;
+        }
+      }
+    }
+    @include breakpoint(mobile) {
+      & {
+        flex-direction: column;
+      }
+    }
+  }
+  .read-more {
+    @include readMore($products-background, white);
   }
 }

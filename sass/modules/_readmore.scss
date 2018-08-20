@@ -1,0 +1,23 @@
+@mixin readMore($bgcolor, $textcolor) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -65px;
+  width: 130px;
+  height: 32px;
+  font-family: "Karbon", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: $bgcolor;
+  background-image: linear-gradient($bgcolor, darken($bgcolor, 10%));
+  color: $textcolor;
+  text-transform: uppercase;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  transition: height 0.3s;
+  &:hover {
+    height: 40px;
+  }
+}
