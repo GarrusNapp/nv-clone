@@ -1,0 +1,64 @@
+@import "../modules/colors";
+@import "../modules/breakpoints";
+@import "../modules/readmore";
+
+.products {
+  position: relative;
+  background-image: url("../images/our-products-bg-01.png");
+  background-size: cover;
+  background-color: $products-background;
+  .products-info {
+    padding: 20px 80px;
+    .header-small {
+      font-family: "Karbon", sans-serif;
+      font-weight: bold;
+      //font-size: 12px;
+      text-transform: uppercase;
+      color: $products-header-small;
+    }
+    .section-title {
+      font-family: "Karbon", sans-serif;
+      font-weight: 200;
+      font-size: 4rem;
+      color: white;
+    }
+  }
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 40px;
+    .product {
+      display: flex;
+      width: 300px;
+      margin: 10px;
+      h4 {
+        font-family: "Karbon", sans-serif;
+        font-weight: 200;
+        font-size: 2.5rem;
+        color: white;
+      }
+      span {
+        font-family: "Karbon", sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #0a647f;
+      }
+      p {
+        font-family: "Droid Sans", sans-serif;
+        font-size: 14px;
+        line-height: 22px;
+        padding-top: 20px;
+        color: #d8f0f8;
+      }
+      img {
+        align-self: flex-start;
+        padding-right: 10px;
+      }
+    }
+  }
+  .read-more {
+    @include readMore(white, $products-background);
+  }
+}
